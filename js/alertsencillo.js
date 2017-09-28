@@ -48,3 +48,13 @@ resultado7 = numero5 % numero6;
 
 console.log("Las operaciones son: \n" + "Suma: " + resultado3 + "\nResta: " + resultado4 + "\nMultiplicacion: " + resultado5 +
 "\nDivision: " + resultado6 + "\nModulo: " + resultado7);
+
+//relacionales
+var numero7 = 3;
+var numero8 = 5;
+var numero9 = 3;
+resultado8 = numero7 > numero8;
+console.log(resultado8);
+console.log(numero7<=numero9);
+
+
