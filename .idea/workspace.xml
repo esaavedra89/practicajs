@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83a63076-1646-4ce3-a224-8ce29e2834a7" name="Default" comment="" />
+    <list default="true" id="83a63076-1646-4ce3-a224-8ce29e2834a7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ejercicio4.html" afterPath="$PROJECT_DIR$/ejercicio4.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +47,8 @@
       <file leaf-file-name="ejercicio4.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ejercicio4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+            <state relative-caret-position="408">
+              <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -71,9 +73,9 @@
         <option value="$PROJECT_DIR$/js/alertsencillo.js" />
         <option value="$PROJECT_DIR$/js/ejercicio4.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/ejercicio4.html" />
         <option value="$PROJECT_DIR$/js/estructuras.js" />
         <option value="$PROJECT_DIR$/estructuras.html" />
+        <option value="$PROJECT_DIR$/ejercicio4.html" />
       </list>
     </option>
   </component>
@@ -236,12 +238,12 @@
       <updated>1506604187905</updated>
       <workItem from="1506604189786" duration="2678000" />
       <workItem from="1506610314658" duration="4079000" />
-      <workItem from="1506625714493" duration="7236000" />
+      <workItem from="1506625714493" duration="7493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13993000" />
+    <option name="totallyTimeSpent" value="14250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -370,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ejercicio4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="408">
+          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding />
         </state>
       </provider>
