@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/ejercicio15.js"></script>
+    <style>
+        img{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 20px;
+        }
+
+        .block1{
+            height: 150px;
+            width: 150px;
+            background-color: lightyellow;
+        }
+        .block2{
+            height: 150px;
+            width: 150px;
+            background-color: lightblue;
+            color: white;
+        }
+        .block3{
+            height: 150px;
+            width: 150px;
+            background-color: transparent;
+
+        }
+        
+        .hide{
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center text-danger">Ejercicio 15</h1>
+        <br>
+        <h3>Completar el código JavaScript proporcionado para que:</h3>
+
+        <ol>
+            <li>Al mover el ratón en cualquier punto de la ventana del navegador, se muestre la posición del puntero
+                respecto del navegador y respecto de la página:</li>
+            <div id="div" >
+                <h4>Ratón</h4>
+                <p>Navegador: <span id="navegador"></span></p>
+                <p>Pagina: <span id="pagina"></span></p>
+            </div>
+            <div id="mostrar" class="hide">
+                <h4>Teclado</h4>
+                <p>Caracter: <span id="caracter"></span></p>
+                <p>Codigo: <span id="codigo"></span></p>
+            </div>
+
+        </ol>
+
+
+    </div>
+</div>
+
+</body>
+</html>
