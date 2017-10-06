@@ -34,7 +34,7 @@ for(var i in teclas_especiales) {
 }
     return permitidos.indexOf(caracter) != -1 || tecla_especial;
 }*/
-swal("Hello world!");
+
 
 
 function limita(maximoCaracteres) {
