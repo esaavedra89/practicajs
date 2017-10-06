@@ -1,0 +1,91 @@
+<!--Para enviar datos con el formulario no funciona con los inputs, tiene que usarse los botones
+y colocar que son tipo boton-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 18 </title>
+    <script type="text/javascript" src="js/ejercicio18.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<div class="container-fluid">
+    <div class="header">
+        <div>
+            <h1 class="text-primary text-center">Formulario Javascript</h1>
+            <p class="text-primary text-center">Formulario sencillo realizado con JavaScript</p>
+        </div>
+    </div>
+</div>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="form-inline justify-content-center form-group formu">
+            <form name="form"  class="">
+                <div class="col-xs-6 f-fila1">
+                    <div class="fila1-nombre">
+                        <span class="font-weight-bold">Nombre</span>
+                        <input class="form-control" type="text" id="nombre" placeholder="Su nombre"/>
+                    </div>
+                    <div class="fila1-apellido ">
+                        <span class="font-weight-bold">Apellido</span>
+                        <input class="form-control" type="text" id="apellido" name="apellido" value="" placeholder="Su apellido" size="25"><br>
+                    </div>
+                </div>
+                <div class="col-xs-6 f-fila2">
+                    <div class="fila2-ci">
+                        <span class="font-weight-bold">CI</span>
+                        <input class="form-control" type="text" id="cedula" name="cedula" value="" placeholder="Cédula de Identidad" size="25" maxlength="9"/>
+                    </div>
+                    <div class="fila2-tel">
+                        <span class="font-weight-bold">Teléfono</span>
+                        <input class="form-control" type="text" id="tel" name="telefono" value="" placeholder="Número telefónico" size="25" maxlength="14"/><br>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center f-fila3">
+                    <span class="font-weight-bold">Correo Electrónico</span>
+                    <input class="form-control" type="email" id="correo" name="correo" value="" placeholder="Ingrese su Email" size="40"/><br>
+                </div>
+                <div class="col-xs-6 f-fila4">
+                    <div class="fila4-civil">
+                        <span class="font-weight-bold">Estado civil:</span><br>
+                        <input type="radio" value="soltero" name="pregunta" id="solerto"/> Soltero<br>
+                        <input type="radio" value="casado" name="pregunta" id="casado"/> Casado<br>
+                        <input type="radio" value="divorciado" name="pregunta" id="divorciado"/> Divorciado<br>
+                        <input type="radio" value="viudo" name="pregunta" id="viudo"/> Viudo<br>
+                    </div>
+                    <div class="fila4-sexo">
+                        <span class="font-weight-bold">Seleccione su sexo:</span> <br/>
+                        <select id="sexo" name="sexo">
+                            <option value="0">Sexo</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Gay</option>
+                            <option value="4">Aun no sabe</option>
+                        </select><br/>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <span class="font-weight-bold">Mas sobre ti</span><br/>
+                    <textarea id="campoTexto" name="campoTexto" cols="80" rows="5" onkeypress="return limita(100);"></textarea>
+                    <div>
+                        <p class="text-secondary">Caracteres faltantes: <span id="caracteres"></span></p>
+                    </div>
+                    <br/>
+                    <input type="checkbox" value="condiciones" name="condiciones" id="condiciones"/> <span class="font-weight-bold">
+                    He leído y acepto las condiciones</span><br/>
+                    <input type="checkbox" value="informacion" name="informacion" id="informacion"/>
+                    <span class="font-weight-bold">Quiero recibir información acerca de ...</span><br/>
+                    <button type="button" onclick="return formulario()">Enviar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

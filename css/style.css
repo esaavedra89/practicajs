@@ -1,0 +1,45 @@
+*{
+    padding:0px;
+    margin: 0px;
+    font-family: Helvetica,Arial,sans-serif;
+
+}
+
+.formu, .col-xs-6, .col-xs-12{
+    border: 1px solid lightskyblue;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input, textarea, select {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.fila1-nombre, .fila1-apellido, .fila2-ci, .fila2-tel, .fila4-civil, .fila4-sexo{
+    display: inline-block;
+}
+
+.fila1-apellido, .fila2-tel, .fila4-sexo{
+    float: right;
+}
+
+.fila4-civil{
+    margin-left: 10%;
+}
+.fila4-sexo{
+    margin-right: 10%;
+}
+
+button{
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 45%;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: #007bff;
+    border-style: double;
+
+}
+
+
