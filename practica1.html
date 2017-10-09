@@ -1,0 +1,48 @@
+<!--Al usar el innerHtml se debe colocar el script antes de cerrar el body, -->
+<!--Para enviar datos con el formulario no funciona con los inputs, tiene que usarse los botones
+y colocar que son tipo boton-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Practica 1</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<div class="container-fluid">
+    <div class="header">
+        <div>
+            <h1 class="text-primary text-center">Ejercicio con While</h1>
+            <p class="text-primary text-center">Realizados con JavaScript</p>
+        </div>
+    </div>
+</div>
+
+<body>
+<div class="container">
+    <div class="row">
+       <div class="imprimir text-info col-xs-5">
+           <div class="left con">
+               <p class="text-info">Ingrese un número</p><span id="imprime"></span>
+               <input type="text" id="input" placeholder="Número" maxlength="25" size="30"/>
+               <button type="button" onclick="impri()">Enviar</button>
+           </div>
+       </div>
+        <div class="imprimir col-xs-7">
+            <div class="right">
+                <form action="" onsubmit="this.reset()">
+                    <p class="text-capitalize text-danger">Ingrese su fecha de nacimiento</p>
+                    <input type="text" id="dia" placeholder="Día" value="" />
+                    <input type="text" id="mes" placeholder="Mes" value="" />
+                    <input type="text" id="ano" placeholder="año" value="" />
+                    <button type="submit" onclick=" return edad()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/practica1.js"></script>
+</body>
+</html>
