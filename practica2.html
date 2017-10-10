@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 2</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/practica2.js"></script>
+    <style>
+        .change-content, .change-img{
+            display: inline-table;
+            padding: 20px;
+            margin: 20px;
+            border: 1px dotted darkblue;
+        }
+        .container{border: 1px solid rebeccapurple};
+        .row{border: 2px dashed yellow}
+        h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold}
+        p{color: darkmagenta}
+        button{
+            color: whitesmoke;background-color:#004085;border-radius: 10px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="operations">
+            <div class="change-content">
+                <h3 >What can JS do</h3>
+                <p id="change">JS can change HTML content</p>
+                <button type="button" onclick="change()">Try me</button>
+                <div id="print"></div>
+
+            </div>
+            <div class="change-img">
+                <h3>JavaScript can change HTML attributes.</h3>
+                <p>We are going to change the source attribute of an image</p>
+                <button onclick="turnOn()">Turn On</button>
+                <img id="myImg" src="img/turnoff.jpg" style="width:100px">
+                <button onclick="turnOff()">Turn Off</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
