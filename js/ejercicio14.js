@@ -11,6 +11,6 @@ function mostrarOcultar(id) {
     }else {
         ele.style.display = "block";
         enla.innerHTML="Ocultar información";
-    }
+    }jc
 }
 

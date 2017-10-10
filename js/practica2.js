@@ -16,7 +16,6 @@ function change() {
     }
 
 }
-
 //cambiar imagenes dentro del html
 //es necesario dejar la variable img como variable pivada, de otra manera no funciona
 function turnOn(){
@@ -30,3 +29,17 @@ function turnOff() {
 }
 
 //change CSS styles
+function changeCSS() {
+    var box_1 = document.getElementById("div-1");
+    var box_2 = document.getElementById("div-2");
+    var box_3 = document.getElementById("div-3");
+        box_1.className = "box1";
+        box_2.className = "box2";
+        box_3.className = "box3";
+}
+function hideElements() {
+    var hide = document.getElementById("hide");
+    if(hide.style.display=="" || hide.style.display=="block"){
+        hide.style.display ="none";
+    }else {hide.style.display=="block"}
+}

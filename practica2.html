@@ -6,43 +6,64 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/practica2.js"></script>
     <style>
-        .change-content, .change-img{
+        .change-content{
             display: inline-table;
             padding: 20px;
             margin: 20px;
             border: 1px dotted darkblue;
         }
-        .container{border: 1px solid rebeccapurple};
-        .row{border: 2px dashed yellow}
+        .container{border: 1px solid rebeccapurple;width: 100%;}
+        .row{border: 2px dashed yellow;width:100%;}
         h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold}
-        p{color: darkmagenta}
-        button{
-            color: whitesmoke;background-color:#004085;border-radius: 10px;}
+        p{color: darkmagenta; text-align: center}
+        .button{
+            color: whitesmoke;
+            background-color:#004085;
+            border-radius: 10px;
+            justify-content: center;
+            margin-left: 25%;
+        }
+        .button-other{
+            color: whitesmoke;
+            background-color:#004085;
+            border-radius: 10px;
+            }
+        .box1{background-color:#f8f9fa;padding:20px;margin-left:50%;}
+        .box2{background-color:#d1ecf1;padding:20px;margin-left:50%;}
+        .box3{background-color:darkturquoise;padding:20px;margin-left:50%;}
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="operations">
-            <div class="change-content">
+            <div class="change-content" id="div-1">
                 <h3 >What can JS do</h3>
                 <p id="change">JS can change HTML content</p>
-                <button type="button" onclick="change()">Try me</button>
+                <button class="button" type="button" onclick="change()">Try me</button>
                 <div id="print"></div>
-
             </div>
-            <div class="change-img">
+            <div class="change-content" id="div-2">
                 <h3>JavaScript can change HTML attributes.</h3>
                 <p>We are going to change the source attribute of an image</p>
-                <button onclick="turnOn()">Turn On</button>
+                <button class="button" onclick="turnOn()">Turn On</button>
                 <img id="myImg" src="img/turnoff.jpg" style="width:100px">
-                <button onclick="turnOff()">Turn Off</button>
+                <button class="button-other" onclick="turnOff()">Turn Off</button>
             </div>
-
+            <div class="change-content" id="div-3">
+                <h3>JavaScript can change CSS attributes</h3>
+                <p>Click the button and see the changes</p>
+                <button class="button" onclick="changeCSS()">Change CSS</button>
+            </div>
+            <div class="change-content">
+                <h3>JavaScript can hide HTML elements</h3>
+                <p>It's very easy to do this, click the button and you will see the changes</p>
+                <p>You need to make to double click</p>
+                <p id="hide">This text will be hide</p>
+                <button class="button" onclick="hideElements()">Click me Please</button>
+            </div>
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
