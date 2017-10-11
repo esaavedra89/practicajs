@@ -18,7 +18,7 @@ function change() {
 }
 //cambiar imagenes dentro del html
 //es necesario dejar la variable img como variable pivada, de otra manera no funciona
-/*function turnOn(){
+function turnOn(){
     var img = document.getElementById("myImg");
     img.src='img/turn-on.jpg';
 }
@@ -27,18 +27,6 @@ function turnOff() {
     var img = document.getElementById("myImg");
     img.src ='img/turnoff.jpg';
 }
-*/
-function turnOn(){
-    var img = document.getElementById("myImg");
-    if(img.src=='img/turnoff.jpg' ||img.style.width=='100px'){
-        img.src='img/turn-on.jpg';
-    }else{
-        img.src='img/turnoff.jpg';
-    }
-
-}
-
-
 
 //change CSS styles
 function changeCSS() {
@@ -46,11 +34,9 @@ function changeCSS() {
     var box_2 = document.getElementById("div-2");
     var box_3 = document.getElementById("div-3");
 
-
             box_1.className = "box1";
             box_2.className = "box2";
             box_3.className = "box3";
-
 }
 //hide elements
 function hideElements() {
@@ -87,4 +73,31 @@ function myFunction(name, job) {
     }
 }
 
+var reto = document.getElementById("return");
+function retornar(a, b) {
+    return a * b;
+}
+
+var transform = document.getElementById("temperature");
+function transf(f) {
+    return (5/9)*(f-32);
+}
+//here we transform a value in Fahrenheit degrees through an input
+function inputTemp() {
+    var show = document.getElementById("showTemp");
+    var input= document.getElementById("temp").value;
+    var div = (5/9), rest = (input-32), ope = div * rest;
+    show.innerHTML = ope;
+}
+
+//here we are going to know the length of a string chain
+function stringChain() {
+    var chain = document.getElementById("size").value;
+    var tama = document.getElementById("length");
+    document.getElementById("hide1").style.display = "block";
+    tama.innerHTML = chain.length;
+}
+    transform.innerHTML = transf(77);
+    reto.innerHTML = retornar(4, 3);
     window.onload = insert;
+

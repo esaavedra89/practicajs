@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>Practica 2</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script type="text/javascript" src="js/practica2.js"></script>
+
     <style>
+        .container-fluid{background-color: floralwhite;}
         .change-content{
             padding: 20px;
-            margin: 20px;
+            /*margin: 20px;*/
             border: 1px dotted darkblue;
+            width: 80%; /* or anything other than auto */
+            margin-left: auto;
+            margin-right: auto;
         }
         .container{border: 1px solid rebeccapurple;width: 100%;}
         .row{border: 2px dashed yellow;width:100%;}
-        h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold}
+        h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold; text-align: center;}
         p{color: darkmagenta; text-align: center}
         .button{
             color: whitesmoke;
@@ -30,9 +34,16 @@
         .box1{background-color:#f8f9fa;padding:20px;margin-left:50%;}
         .box2{background-color:#d1ecf1;padding:20px;margin-left:50%;}
         .box3{background-color:darkturquoise;padding:20px;margin-left:50%;}
+        input{margin-left:25%;}
+        #hide1{display: none;}
+
     </style>
 </head>
 <body>
+<div class="container-fluid">
+    <h1>This practice is only to make focusing in JavaScript, not in CSS or HTML</h1>
+    <p class="text-secondary">I know that this shit see really really dirty</p>
+</div>
 <div class="container">
     <div class="row">
         <div class="operations">
@@ -70,10 +81,30 @@
             <div class="change-content" id="div-6">
                 <h3>We can call a function with arguments</h3>
                 <p id="twoArguments"></p>
+                <p id="return">This operations return: </p>
                 <button class="button" onclick="myFunction('Harry Potter', 'Wizard')">Push me</button>
             </div>
+            <div class="change-content" id="div-7">
+                <h3>You can call a function that can convert from Fahrenheit to Celsius</h3>
+                <p>This first example we are goint to convert one valor fixed</p>
+                <p>We are going to convert 77 celsius degrees to Fahrenheit </p>
+                <p>The degrees are: <span id="temperature"> Fahrenheit</span></p>
+                <form>
+                    <input id="temp" type="text" value="" placeholder=" Input the degrees in Fahrenheit" size="50">
+                    <button class="button" onclick="inputTemp()">Send</button>
+                    <p id="showTemp"></p>
+                </form>
+                <p>You can know the length of one string</p>
+                <form>
+                    <input id="size" type="text" value="" placeholder="Input text">
+                    <button class="button" onclick="stringChain()">Say goodbye</button>
+                    <p id="hide1">The chain of string hace a length of: <span id="length"></span></p>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
+<script type="text/javascript" src="js/practica2.js"></script>
 </body>
 </html>
