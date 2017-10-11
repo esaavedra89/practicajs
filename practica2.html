@@ -7,7 +7,6 @@
     <script type="text/javascript" src="js/practica2.js"></script>
     <style>
         .change-content{
-            display: inline-table;
             padding: 20px;
             margin: 20px;
             border: 1px dotted darkblue;
@@ -21,7 +20,7 @@
             background-color:#004085;
             border-radius: 10px;
             justify-content: center;
-            margin-left: 25%;
+            margin-left: 40%;
         }
         .button-other{
             color: whitesmoke;
@@ -55,12 +54,23 @@
                 <p>Click the button and see the changes</p>
                 <button class="button" onclick="changeCSS()">Change CSS</button>
             </div>
-            <div class="change-content">
+            <div class="change-content" id="div-4">
                 <h3>JavaScript can hide HTML elements</h3>
                 <p>It's very easy to do this, click the button and you will see the changes</p>
                 <p>You need to make to double click</p>
                 <p id="hide">This text will be hide</p>
                 <button class="button" onclick="hideElements()">Click me Please</button>
+            </div>
+            <div class="change-content" id="div-5">
+                <h3>With JavaScript you can create Objects</h3>
+                <p>It's very ease to do</p>
+                <p id="demo"></p>
+                <p id="demo2"></p>
+            </div>
+            <div class="change-content" id="div-6">
+                <h3>We can call a function with arguments</h3>
+                <p id="twoArguments"></p>
+                <button class="button" onclick="myFunction('Harry Potter', 'Wizard')">Push me</button>
             </div>
         </div>
     </div>

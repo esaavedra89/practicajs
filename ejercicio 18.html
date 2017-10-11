@@ -8,6 +8,78 @@ y colocar que son tipo boton-->
     <script type="text/javascript" src="js/ejercicio18.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+
+        function limita(maximoCaracteres) {
+            var elemento = document.getElementById("campoTexto");
+            var cara = document.getElementById("caracteres");
+            cara.innerHTML = maximoCaracteres-elemento.value.length;
+            if(elemento.value.length >= maximoCaracteres ) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function formulario() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var ci = document.getElementById("cedula").value;
+            var cel = document.getElementById("tel").value;
+            var correo = document.getElementById("correo").value;
+            var radiobutton = document.getElementsByName("pregunta");
+            var sexo = document.getElementById("sexo");
+            //obtener el valor de la opcion seleccionada
+            var sexoValorSeleccionado = sexo.options[sexo.selectedIndex].value;
+            //obtener el texto que muestra la opcion seleccionada
+            var sexoSeleccionado = sexo.options[sexo.selectedIndex].text;
+            var campoTexto = document.getElementById("campoTexto").value;
+            var condiciones = document.getElementById("condiciones");
+            var informacion = document.getElementById("informacion");
+            var valida = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+
+
+
+
+            if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+                swal("Casilla de nombre no puede quedar en blanco");
+                return false;
+            } else if (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
+                swal("Apellido no debe quedar vacio");
+                return false;
+            } else if (ci == null || ci.length == 0 || isNaN(ci)) {
+                swal("Ingrese su numero de CI");
+                return false;
+            } else if (cel == null || cel.length == 0 || isNaN(cel)) {
+                swal("Ingrese su numero telefonico");
+                return false;
+            } else if (!valida.test(correo)) {
+                swal("Ingrese una direccion de correo valida");
+                return false;
+            } else if (sexoValorSeleccionado == null || sexoValorSeleccionado == 0){
+                swal("Debe seleccionar su sexo");
+                return false;
+            } else if (condiciones.checked == false) {
+                swal("Debe aceptar las condiciones para enviar el formulario");
+                return false;
+            }
+            else {
+
+                for (var i = 0; i < radiobutton.length; i++) {
+                    if (radiobutton[i].checked) {
+                        swal("Su nombre es: " + nombre + " " + apellido + "\n" + "Su CI es: " + ci + "\n" +
+                            "Su Numero de telefono es: " + cel + "\n" + "Su correo electronico es: " + correo + "\n" +
+                            "Su estado civil es: " + radiobutton[i].value + "\n" + "Su sexo es: " +sexoSeleccionado + "\nPresentacion: \n"
+                            + campoTexto + "\nAcepta las condiciones: " + condiciones.checked + "\nQuiero recibir informacion: " + informacion.checked);
+                    }
+                }
+            }
+        }
+
+    </script>
 </head>
 
 <div class="container-fluid">
