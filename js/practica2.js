@@ -110,3 +110,17 @@ function findWord() {
     imp.innerHTML = captura;
 
 }
+
+function toLower() {
+    var intrance1 = document.getElementById("intrance").value;
+    var ready1 = intrance1.toLowerCase();
+    var lowerUpper1 = document.getElementById("lowerUpper");
+    lowerUpper1.innerHTML = ready1;
+}
+
+function toUpper() {
+    var intrance = document.getElementById("intrance").value;
+    var ready = intrance.toUpperCase();
+    var lowerUpper = document.getElementById("lowerUpper");
+lowerUpper.innerHTML = ready;
+}

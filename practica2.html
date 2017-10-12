@@ -17,8 +17,7 @@
             margin-right: auto;
         }
         .container{border: 1px solid rebeccapurple;width: 100%;}
-        .row{border: 2px dashed yellow;width:100%;}
-        h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold; text-align: center;}
+        h1, h2, h3, h4, h5, h6{color: #007bff;font-weight: bold;text-align: center;}
         p{color: darkmagenta; text-align: center}
         .button{
             color: whitesmoke;
@@ -35,7 +34,7 @@
         .box1{background-color:#f8f9fa;padding:20px;}
         .box2{background-color:#d1ecf1;padding:20px;}
         .box3{background-color:darkturquoise;padding:20px;}
-        input{margin-left:25%;}
+        input{margin-left:25%;display: block}
         #hide1{display: none;}
 
     </style>
@@ -45,8 +44,8 @@
     <h1>This practice is only to make focusing in JavaScript, not in CSS or HTML</h1>
     <p class="text-secondary">I know that this shit see really really dirty</p>
 </div>
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+
         <div class="operations">
             <div class="change-content" id="div-1">
                 <h3 >What can JS do</h3>
@@ -107,9 +106,15 @@
                 <p id="ain">The rain in SPAIN stays mainly in the plain</p>
                 <p id="demo3"></p>
                 <button class="button" onclick="findWord()">Encontrar</button>
+                <h4>Also you can change words to upper or lower case if yoou can</h4>
+                <form>
+                <input id="intrance" type="text" value="" placeholder="Insert your word">
+                    <button class="button" onclick="toLower()">lowercase</button>
+                    <button class="button" onclick="toUpper()">UPPERCASE</button>
+                    <p>The word now is: <span id="lowerUpper"></span></p>
+                </form>
             </div>
         </div>
-    </div>
 </div>
 <script type="text/javascript" src="js/practica2.js"></script>
 </body>
