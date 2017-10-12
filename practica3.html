@@ -9,11 +9,19 @@
 
 
     <style>
+
         *{
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            padding: 0;
+            margin: 0;
         }
-        .container{border: 1px solid rebeccapurple;}
-        #top{
+        .container{
+            border: 1px solid rebeccapurple;
+            border-radius: 10px;
+
+        }
+        .top{
+
             padding-top: 1.0rem;
             padding-bottom: 1.0rem;;
             border-bottom: 1px solid #EEE;
@@ -21,11 +29,13 @@
             font-size: 20px;
             font-weight: bold;
             color: #ffffff;
+            width: 100%;
         }
         .inputs{
             border-color: #d1ecf1;
             margin-right: 5px;
             margin-left: 35%;
+            border-radius: 5px;
         }
         .buttons{
             background-color: #00AE77;
@@ -34,11 +44,29 @@
             padding: 10px;
             border-radius: 5px;
         }
+        h1, h2, h3, h4{
+            margin-top: 10px;
+        }
+        .footer{
+            padding: 20px;
+            
+            background-color: black;
+            color: #f8f9fa;
+        }
+        .text-l{
+            display: inline-block;
+            float: left;
+        }
+        .text-r{
+            display: inline-block;
+            float: right;
+        }
+
     </style>
 </head>
 <body>
 <div class="container-fluid">
-    <p id="top" class="text-center">This site is only to practice with JavaScript</p>
+    <p class="text-center top">This site is only to practice with JavaScript</p>
     <h1 class="text-center text-info">We are going to continue with the Practices on JavaScript</h1>
     <p class="text-secondary text-center">I will try to do this better that the last one</p>
 </div>
@@ -53,12 +81,43 @@
     </div>
 </div>
 <div class="container">
-    <div>
-        <h3 id="h32" class="text-center text-dark"></h3>
-        <input id="input1" type="text" class="inputs" value="" placeholder="">
-        <button class="buttons" onclick="">Find</button>
-        <p id=""></p>
 
+        <h3 class="text-center text-dark">JavaScript Celcius to Fahrenhet</h3>
+
+        <p class="text-secondary text-center">Insert a number into one of the input fields below:</p>
+
+        <p><input id="c" onkeyup="convert('C')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> degrees Celsius</p>
+
+        <p><input id="f" onkeyup="convert('F')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> degrees Fahrenheit</p>
+
+        <p class="text-secondary text-center">Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
+
+
+
+</div>
+<div class="container">
+
+    <h3 class="text-center text-dark">JavaScript can show you the date</h3>
+
+    <p class="text-secondary text-center">Don't worrie, you don't have to do nothing</p>
+
+    <p class="text-center">Today is: <span id="date" ></span></p>
+
+</div>
+<div class="container">
+
+    <h3 class="text-center text-dark">JavaScript can display the actual time</h3>
+
+    <p class="text-secondary text-center">Don't worrie again, you don't have to do nothing. Trust me</p>
+
+    <p class="text-center">The actual ha: <span id="dtime" ></span></p>
+
+</div>
+
+<div class="footer">
+    <div >
+        <p class="text-l">All Rights Reserved</p>
+        <p class="text-r">This Fucking Shit</p>
     </div>
 </div>
 <script type="text/javascript" src="js/practica3.js"></script>
