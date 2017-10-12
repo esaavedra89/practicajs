@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <style>
+        *{margin: 0; padding: 0}
         .container-fluid{background-color: floralwhite;}
         .change-content{
             padding: 20px;
             /*margin: 20px;*/
             border: 1px dotted darkblue;
-            width: 80%; /* or anything other than auto */
+            width: 100%; /* or anything other than auto */
             margin-left: auto;
             margin-right: auto;
         }
@@ -23,17 +24,17 @@
             color: whitesmoke;
             background-color:#004085;
             border-radius: 10px;
-            justify-content: center;
             margin-left: 40%;
+
         }
         .button-other{
             color: whitesmoke;
             background-color:#004085;
             border-radius: 10px;
             }
-        .box1{background-color:#f8f9fa;padding:20px;margin-left:50%;}
-        .box2{background-color:#d1ecf1;padding:20px;margin-left:50%;}
-        .box3{background-color:darkturquoise;padding:20px;margin-left:50%;}
+        .box1{background-color:#f8f9fa;padding:20px;}
+        .box2{background-color:#d1ecf1;padding:20px;}
+        .box3{background-color:darkturquoise;padding:20px;}
         input{margin-left:25%;}
         #hide1{display: none;}
 
@@ -101,10 +102,17 @@
                     <p id="hide1">The chain of string hace a length of: <span id="length"></span></p>
                 </form>
             </div>
-
+            <div class="change-content" id="div-8">
+                <h3>You can find a special word or letter if you want with the (/g)</h3>
+                <p id="ain">The rain in SPAIN stays mainly in the plain</p>
+                <p id="demo3"></p>
+                <button class="button" onclick="findWord()">Encontrar</button>
+            </div>
         </div>
     </div>
 </div>
 <script type="text/javascript" src="js/practica2.js"></script>
 </body>
 </html>
+
+

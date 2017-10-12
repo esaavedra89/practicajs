@@ -100,4 +100,13 @@ function stringChain() {
     transform.innerHTML = transf(77);
     reto.innerHTML = retornar(4, 3);
     window.onload = insert;
+//Find a woord in a text.
+function findWord() {
+    var str = "The rain in SPAIN stays mainly in the plain";
+    //var str = document.getElementById("ain").value;
+    var captura = str.match(/ain/g);
+    var imp = document.getElementById("demo3");
 
+    imp.innerHTML = captura;
+
+}
