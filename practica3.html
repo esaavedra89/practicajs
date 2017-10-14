@@ -6,7 +6,43 @@
     <title>Practica 3</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+        function findPosition() {
+            var input = document.getElementById("input").value;
+            var str = "With JavaScript you can find a position of one letter in an array.";
+            var arr = str.split("");
+            var print1 = document.getElementById("print");
 
+            if((input == null || input.length == 0 || isNaN(input))){
+                swal("Insert only number");
+                return false;
+            }else{
+                print1.innerHTML = arr[input];
+                return true;
+            }
+        }
+        //convert degrees
+        function convert(degree) {
+            var y = document.getElementById("c").value;
+            var x;
+            if(y == null || isNaN(y)){
+                swal("Insert only number in Degrees");
+            }else if((y == null || isNaN(y))){
+                swal("Insert only number in Fahrenheit");
+            } else {
+                if (degree == "C") {
+                    x = document.getElementById("c").value * 9 / 5 + 32;
+                    document.getElementById("f").value = Math.round(x);
+                } else {
+                    x = (document.getElementById("f").value -32) * 5 / 9;
+                    document.getElementById("c").value = Math.round(x);
+                }
+            }
+        }
+
+
+
+    </script>
 
     <style>
 
@@ -15,7 +51,7 @@
             padding: 0;
             margin: 0;
         }
-        .container{
+        .conta{
             border: 1px solid rebeccapurple;
             border-radius: 10px;
 
@@ -31,6 +67,9 @@
             color: #ffffff;
             width: 100%;
         }
+        #top-secundary{
+            font-size: 14px;
+        }
         .inputs{
             border-color: #d1ecf1;
             margin-right: 5px;
@@ -44,45 +83,59 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        .buttons:hover{
+            background-color: #17a2b8;
+        }
         h1, h2, h3, h4{
             margin-top: 10px;
         }
         .footer{
-            padding: 20px;
-            
-            background-color: black;
+            margin-top: 20px;
+            padding: 30px 0 20px 0;
+            background-color: #343a40 ;
             color: #f8f9fa;
         }
         .text-l{
             display: inline-block;
-            float: left;
+            /*float: left;*/
+            text-align: left;
+            font-weight: bold;
+
         }
         .text-r{
             display: inline-block;
             float: right;
+            font-weight: bold;
+
         }
 
     </style>
 </head>
 <body>
 <div class="container-fluid">
-    <p class="text-center top">This site is only to practice with JavaScript</p>
+    <p class="text-center top">This site is only to practice with JavaScript<br><span class="font-italic text-white" id="top-secundary">Well, and... just a little bit of CSS, but just a little.</span></p>
+
     <h1 class="text-center text-info">We are going to continue with the Practices on JavaScript</h1>
     <p class="text-secondary text-center">I will try to do this better that the last one</p>
 </div>
 <br>
-<div class="container">
+<div class="container conta">
     <div>
         <h3 id="h3" class="text-center text-dark">With JavaScript you can find a position of one letter in an array.</h3>
-        <input id="input" type="text" class="inputs" value="" placeholder=" Insert the position">
-        <button class="buttons" onclick="findPosition()">Find</button>
-        <p id="print"></p>
+
+            <input id="input" type="text" class="inputs" value="" placeholder=" Insert the position">
+            <button class="buttons" onclick="return findPosition()" type="submit">Find</button>
+            <p id="print"></p>
+        <!--Si se deja el <p id="print"></p>(innerHTML) dentro de un formulario, se muestra el
+        resultado pero inmediatamente se oculta-->
+
 
     </div>
 </div>
-<div class="container">
+<div class="container conta">
 
-        <h3 class="text-center text-dark">JavaScript Celcius to Fahrenhet</h3>
+        <h3 class="text-center text-dark">JavaScript Celsius to Fahrenhet</h3>
 
         <p class="text-secondary text-center">Insert a number into one of the input fields below:</p>
 
@@ -95,31 +148,53 @@
 
 
 </div>
-<div class="container">
+<div class="container conta">
 
     <h3 class="text-center text-dark">JavaScript can show you the date</h3>
 
-    <p class="text-secondary text-center">Don't worrie, you don't have to do nothing</p>
+    <p class="text-secondary text-center">Don't worry, you don't have to do nothing</p>
 
-    <p class="text-center">Today is: <span id="date" ></span></p>
-
-</div>
-<div class="container">
-
-    <h3 class="text-center text-dark">JavaScript can display the actual time</h3>
-
-    <p class="text-secondary text-center">Don't worrie again, you don't have to do nothing. Trust me</p>
-
-    <p class="text-center">The actual ha: <span id="dtime" ></span></p>
+    <p class="text-center">Today is: <span id="day"> </span> <span id="date" ></span></p>
 
 </div>
+<div class="container conta">
+
+    <h3 class="text-center text-dark">JavaScript can display the current time</h3>
+
+    <p class="text-secondary text-center">Don't worry again, you don't have to do nothing. Trust me</p>
+
+    <p class="text-center">The actual hr: <span id="dtime" ></span></p>
+
+    <p id="sayHello" class="text-center"></p>
+
+</div>
+
+<div class="container conta">
+
+    <h3 class="text-center text-dark">With JavaScript you can do a lot of things</h3>
+
+    <p class="text-secondary text-center">Like a do a loop, you will see...</p>
+
+    <p id="loop1" class="text-center"></p>
+
+    <p class="text-secondary text-center">Make the headings more small over and over. </p>
+    <p class="text-center" id="smallerH"></p>
+
+    <p class="text-secondary text-center">Also you can do a loop with a while. </p>
+    <p class="text-center" id="while"></p>
+
+</div>
+
+
 
 <div class="footer">
-    <div >
-        <p class="text-l">All Rights Reserved</p>
-        <p class="text-r">This Fucking Shit</p>
+    <div class="container">
+        <p><span class="text-l">All Rights Reserved</span>
+        <span class="text-r">This Fucking Shit</span></p>
     </div>
 </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script type="text/javascript" src="js/practica3.js"></script>
 </body>
 </html>
