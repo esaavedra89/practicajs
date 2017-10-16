@@ -6,6 +6,7 @@
     <title>Practica 3</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         function findPosition() {
             var input = document.getElementById("input").value;
@@ -14,7 +15,7 @@
             var print1 = document.getElementById("print");
 
             if((input == null || input.length == 0 || isNaN(input))){
-                swal("Insert only number");
+                swal("Insert only numbers");
                 return false;
             }else{
                 print1.innerHTML = arr[input];
@@ -34,14 +35,11 @@
                     x = document.getElementById("c").value * 9 / 5 + 32;
                     document.getElementById("f").value = Math.round(x);
                 } else {
-                    x = (document.getElementById("f").value -32) * 5 / 9;
+                    x = (document.getElementById("f").value - 32) * 5 / 9;
                     document.getElementById("c").value = Math.round(x);
                 }
             }
         }
-
-
-
     </script>
 
     <style>
@@ -54,10 +52,8 @@
         .conta{
             border: 1px solid rebeccapurple;
             border-radius: 10px;
-
         }
         .top{
-
             padding-top: 1.0rem;
             padding-bottom: 1.0rem;;
             border-bottom: 1px solid #EEE;
@@ -83,13 +79,13 @@
             padding: 10px;
             border-radius: 5px;
         }
-
         .buttons:hover{
             background-color: #17a2b8;
         }
         h1, h2, h3, h4{
             margin-top: 10px;
         }
+        #errorC{margin-left: 44%;}
         .footer{
             margin-top: 20px;
             padding: 30px 0 20px 0;
@@ -101,20 +97,17 @@
             /*float: left;*/
             text-align: left;
             font-weight: bold;
-
         }
         .text-r{
             display: inline-block;
             float: right;
             font-weight: bold;
-
         }
-
     </style>
 </head>
 <body>
 <div class="container-fluid">
-    <p class="text-center top">This site is only to practice with JavaScript<br><span class="font-italic text-white" id="top-secundary">Well, and... just a little bit of CSS, but just a little.</span></p>
+    <p class="text-center top" id="top">This site is only to practice with JavaScript<br><span class="font-italic text-white" id="top-secundary">Well, and... just a little bit of CSS, but just a little.</span></p>
 
     <h1 class="text-center text-info">We are going to continue with the Practices on JavaScript</h1>
     <p class="text-secondary text-center">I will try to do this better that the last one</p>
@@ -130,7 +123,6 @@
         <!--Si se deja el <p id="print"></p>(innerHTML) dentro de un formulario, se muestra el
         resultado pero inmediatamente se oculta-->
 
-
     </div>
 </div>
 <div class="container conta">
@@ -139,15 +131,14 @@
 
         <p class="text-secondary text-center">Insert a number into one of the input fields below:</p>
 
-        <p><input id="c" onkeyup="convert('C')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> degrees Celsius</p>
+        <p><input id="c" onkeyup="convert('C')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> Degrees Celsius</p>
 
-        <p><input id="f" onkeyup="convert('F')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> degrees Fahrenheit</p>
+        <p><input id="f" onkeyup="convert('F')" type="text" class="inputs" value="" placeholder=" Insert the degrees"> Degrees Fahrenheit</p>
 
         <p class="text-secondary text-center">Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
 
-
-
 </div>
+
 <div class="container conta">
 
     <h3 class="text-center text-dark">JavaScript can show you the date</h3>
@@ -157,13 +148,14 @@
     <p class="text-center">Today is: <span id="day"> </span> <span id="date" ></span></p>
 
 </div>
+
 <div class="container conta">
 
     <h3 class="text-center text-dark">JavaScript can display the current time</h3>
 
     <p class="text-secondary text-center">Don't worry again, you don't have to do nothing. Trust me</p>
 
-    <p class="text-center">The actual hr: <span id="dtime" ></span></p>
+    <p class="text-center">The current hour is: <span id="dtime" ></span></p>
 
     <p id="sayHello" class="text-center"></p>
 
@@ -178,14 +170,27 @@
     <p id="loop1" class="text-center"></p>
 
     <p class="text-secondary text-center">Make the headings more small over and over. </p>
+
     <p class="text-center" id="smallerH"></p>
 
     <p class="text-secondary text-center">Also you can do a loop with a while. </p>
+
     <p class="text-center" id="while"></p>
 
+    <p class="text-center text-secondary" >The for/in statement loops through the properties of an object.</p>
+
+    <p id="forIn" class="text-center"></p>
+
+    <p class="text-center text-secondary" >The try...catch an error statement</p>
+
+    <p id="catchError" class="text-center"></p>
+
+    <p class="text-center text-secondary" >The try...catch an error statement with a confirm box</p>
+
+    <input class="buttons" id="errorC" type="button" value="View message" onclick="errorConfirm()" />
+
+    <p id="errorConfirm" class="text-center"></p>
 </div>
-
-
 
 <div class="footer">
     <div class="container">

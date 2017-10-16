@@ -39,7 +39,8 @@ function convert(degree) {
 
      show.innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
 
-     switch (date.getDay()){
+     switch(date.getDay()){
+
          case 0:
              d = "Sunday";
              break;
@@ -59,16 +60,18 @@ function convert(degree) {
              d = "Friday";
              break;
          case 6:
-             d = "Satuday";
-     }
-     day.innerHTML = d;
+             d = "Saturday";
 
+     }
+
+     day.innerHTML = d;
  }
 
  window.onload = dateFull();
 
 //time
 function time() {
+
     var today = new Date();
     var hour = today.getHours();
     var minute = today.getMinutes();
@@ -80,8 +83,10 @@ function time() {
     var t = setTimeout(time, 500);
 
 }
+
 function checkTime(i) {
-    if (i < 10){i = "0" + i};//add zero in front of numbers <10
+    //add zero in front of numbers <10
+    if (i < 10){i = "0" + i};
     return i;
 }
 
@@ -92,7 +97,7 @@ function regards() {
     var sayHello = document.getElementById("sayHello");
     var hour = new Date().getHours();
     if(hour<12){
-        sayHello.innerHTML = "Good morming";
+        sayHello.innerHTML = "Good morning";
     }else if(hour>12 && hour<16){
         sayHello.innerHTML = "Good afternoon";
     }else {
@@ -101,6 +106,7 @@ function regards() {
 }
 window.onload = regards();
 
+//loop 1
 function funct() {
     var x = "", i;
     for (i=0; i<5; i++){
@@ -111,7 +117,7 @@ function funct() {
 
 window.onload = funct();
 
-
+//loop 2
 function loop2() {
     var x = "", i;
     for (i=1; i<6; i++){
@@ -133,3 +139,44 @@ function whi() {
 }
 
 window.onload = whi();
+
+function forIn() {
+    var txt = "";
+    var person = {fname:"John", lname:"Doe", age:25};
+    var x;
+    for (x in person) {
+        txt += person[x] + " ";
+    }
+    document.getElementById("forIn").innerHTML = txt;
+
+}
+
+window.onload = forIn();
+
+function catchError() {
+    var demo = document.getElementById("demo");
+    try {
+        adddlert("Welcome guest!");
+    }
+    catch(err) {
+        document.getElementById("catchError").innerHTML = err.message;
+    }
+}
+
+window.onload = catchError();
+
+function errorConfirm() {
+    var txt= "";
+    try {
+        adddlert("Welcome guest!");
+    }catch (err){
+        txt = "There was an error on this page.\n\n";
+        txt +="Click OK to continue viewing this page,\n\n";
+        txt +="or Cancel to return to the home page.\n\n";
+        if(!confirm(txt)){
+            document.location.href = "practica3.html";
+        }
+    }
+}
+
+
