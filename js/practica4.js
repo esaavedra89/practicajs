@@ -32,14 +32,17 @@ document.getElementById("myLovers").innerHTML = "My niece is :"+myNiece.firstNam
     +" "+myPet.lastName+", she is "+myPet.age+" years old and she is a "+myPet.kind;
 ;
 
+//I was having troubles with the button, because the buttons need to have the type, in this case
+//the button is a button
 function showDetail() {
     var list = document.getElementById("list-persons");
     var listValorSelected = list.options[list.selectedIndex].value;
     //obtener el texto que muestra la opcion seleccionada
-    var listSeleccionado = list.options[list.selectedIndex].text;
+    var listTextSelected = list.options[list.selectedIndex].text;
     var printDetail = document.getElementById("printDetail");
+    var d;
 
-    if(listValorSelected == null || listValorSelected == 0){
+    /*if(listValorSelected == null || listValorSelected == 0){
         swal("You must select one option");
         return false;
     }else if(listValorSelected == 1){
@@ -58,5 +61,63 @@ function showDetail() {
     }
     else{
         printDetail.innerHTML = "Eleazar Saavedra hijo";
+    }*/
+    switch(listTextSelected){
+
+        case "Persons":
+            swal("You must select one option");
+            return false;
+        case "Papa":
+            d = "Eleazar Saaavedra Padre";
+            break;
+        case "Mama":
+            d = "Delvalle Hernandez";
+            break;
+        case "Jose":
+            d = "Jose Saavedra";
+            break;
+        case "Yessica":
+            d = "Yessica Saavedra";
+            break;
+        case "Eleazar":
+            d = "Eleazar Saavedra";
+
+    }
+    printDetail.innerHTML = d;
+}
+
+onerror = handleErr;
+var txt = "";
+function handleErr(message, url, line) {
+    txt = "There was an error on this page.\n\n";
+    txt += "Error: " + message + "\n";
+    txt += "URL: " + url + "\n";
+    txt += "Line: " + line + "\n\n";
+    txt += "Click OK to continue.\n\n";
+    alert(txt);
+    return true;
+}
+
+function message() {
+    consolee.log("Welcome guest!");
+}
+
+function myFunction() {
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try {
+        if(x == "") throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x < 5) throw "too low";
+        if(x > 10) throw "too high";
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
     }
 }
+
+
+
