@@ -1,0 +1,166 @@
+<!--We are going to practice with JS in this file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 5</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script>
+
+    </script>
+
+    <style>
+
+        *{
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .conta{
+            border: 1px solid rebeccapurple;
+            border-radius: 10px;
+        }
+        .top{
+            padding-top: 1.0rem;
+            padding-bottom: 1.0rem;;
+            border-bottom: 1px solid #EEE;
+            background-color: #815cff;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            width: 100%;
+        }
+        #top-secundary{
+            font-size: 14px;
+        }
+        .inputs{
+            border-color: #d1ecf1;
+            margin-right: 5px;
+            margin-left: 41%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .buttons{
+            background-color: #815cff;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 137px;
+
+        }
+        .buttons:hover{
+            background-color: #8d32e2;
+        }
+        h1, h2, h3, h4{
+            margin-top: 10px;
+        }
+        #errorC{margin-left: 43%;display: block;}
+        .footer{
+            margin-top: 20px;
+            padding: 30px 0 20px 0;
+            background-color: #343a40 ;
+            color: #f8f9fa;
+        }
+        .text-l{
+            display: inline-block;
+            /*float: left;*/
+            text-align: left;
+            font-weight: bold;
+        }
+        .text-r{
+            display: inline-block;
+            float: right;
+            font-weight: bold;
+        }
+        select{
+            border-color: #d1ecf1;
+            margin-left: 46%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <p class="text-center top" id="top">This site is only to practice with JavaScript<br><span class="font-italic text-white" id="top-secundary">Well, and... just a little bit of CSS, but just a little.</span></p>
+
+    <h1 class="text-center text-info">Here we are going to practice with JSON</h1>
+    <p class="text-secondary text-center">I will do my best effort</p>
+</div>
+<br>
+<div class="container conta">
+    <div>
+        <h3 id="h3" class="text-center text-dark">Accces a JSON using dot notation</h3>
+        <p class="text-secondary text-center">In this  section we are going to create a JSON and access to one property. A JSON is an object.</p>
+        <p class="text-secondary text-center"><span id="myJ"></span></p>
+        <br/>
+        <p class="text-secondary text-center">For example, here we are going to put
+        one list and you need to choice one option, that option will show you properties
+            about the object selected.</p>
+        <br/>
+        <p class="text-secondary text-center">Select one option</p>
+        <select id="select-property" name="select-property">
+            <option value="0">Options</option>
+            <option value="1">Name</option>
+            <option value="2">LastName</option>
+            <option value="3">Age</option>
+            <option value="4">Car</option>
+        </select>
+        <button type="button" class="buttons" id="errorC" onclick="return selectProperty()">Send</button>
+        <p class="text-center text-dark" id="printProperty"></p>
+    </div>
+</div>
+<div class="container conta">
+
+    <h3 class="text-center text-dark">How to loop through all properties in a JSON object</h3>
+    <p class="text-center text-dark"> In this case with For In, we are going to navigate in all properties</p>
+    <p class="text-center text-dark" id="loopProperty"></p>
+    <br>
+    <h3 class="text-center text-dark">Use bracket notation to access the property values.</h3>
+    <p class="text-center text-dark" id="bracketProp"></p>
+
+</div>
+
+<div class="container conta">
+
+    <h3 class="text-center text-dark">How to access nested JSON objects.</h3>
+    <p id="nestedJS" class="text-center text-dark"></p>
+
+</div>
+
+<div class="container conta">
+    <h3 class="text-center text-dark">How to modify values in a JSON object</h3>
+    <p id="modifyJS" class="text-center text-dark"></p>
+</div>
+
+<div class="container conta">
+
+
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p><span class="text-l">All Rights Reserved</span>
+            <span class="text-r">This Fucking Shit</span></p>
+    </div>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="js/practica5.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
