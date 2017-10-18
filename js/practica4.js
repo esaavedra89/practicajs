@@ -119,5 +119,52 @@ function myFunction() {
     }
 }
 
+function changeWord() {
+    var change = document.getElementById("developer").innerHTML;
+    var txt = change.replace(/System Engineer/i, "Web Developer");
+    document.getElementById("developer").innerHTML = txt;
+
+}
+
+function findPosi() {
+    var str = "Search a string and display the position of the match";
+    var n = str.search(/display/i);
+    var a = document.getElementById("posi");
+
+    if(a.style.display==="" || a.style.display==="none"){
+        a.style.display = "block";
+        a.innerHTML = n;
+    }else {
+        a.style.display = "none";
+    }
+}
+
+function mutable() {
+    var object = {name: "Maria", last: "Sanchez", age: 25, weight: 60};
+    var x = object;
+    x.age = 24;
+    var mutable = document.getElementById("mutable");
+    if(mutable.style.display === "" || mutable.style.display === "none"){
+        mutable.style.display = "block";
+        mutable.innerHTML = "Su nombre es "+x.name + " y su apellido es "+x.last+" su edad es "+x.age;
+    }else {
+        mutable.style.display = "none";
+    }
+
+}
+
+function addProper() {
+    var person = {name:"Daniela", last:"Marquez", age:"29"}
+    person.colorSkin = "brown";
+    var input = document.getElementById("addProper");
+    if(input.style.display===""|| input.style.display==="none"){
+        input.style.display = "block";
+        input.innerHTML = person.name+ " "+person.last+ " "+person.colorSkin;
+    }else {
+        input.style.display = "none";
+    }
+}
+
+
 
 

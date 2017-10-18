@@ -38,8 +38,9 @@
         .inputs{
             border-color: #d1ecf1;
             margin-right: 5px;
-            margin-left: 35%;
+            margin-left: 41%;
             border-radius: 5px;
+            margin-bottom: 20px;
         }
         .buttons{
             background-color: #00AE77;
@@ -48,6 +49,7 @@
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 15px;
+            width: 137px;
 
         }
         .buttons:hover{
@@ -56,7 +58,7 @@
         h1, h2, h3, h4{
             margin-top: 10px;
         }
-        #errorC{margin-left: 45%;display: block;}
+        #errorC{margin-left: 43%;display: block;}
         .footer{
             margin-top: 20px;
             padding: 30px 0 20px 0;
@@ -73,6 +75,12 @@
             display: inline-block;
             float: right;
             font-weight: bold;
+        }
+        select{
+            border-color: #d1ecf1;
+            margin-left: 46%;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -128,14 +136,36 @@
     <h3 class="text-center text-dark"></h3>
     <input id="demo" type="text" class="inputs">
     <button class="buttons" id="errorC" type="button" onclick="myFunction()">Test Input</button>
-    <p id="message"></p>
+    <p id="message" class="text-center text-dark"></p>
 
 </div>
 
 <div class="container conta">
 
-    <h3 class="text-center text-dark"></h3>
+    <h3 class="text-center text-dark">You can change words in a paragraph</h3>
+    <p id="developer" class="text-secondary text-center">Before I was Log Supervisor, now I am a System Engineer</p>
+    <button class="buttons" id="errorC" type="button" onclick="changeWord()">Start</button>
+    <p class="text-secondary text-center">But, my profession is System Engineer</p>
+    <p class="text-secondary text-center">This situation you can do once</p>
+    <br/>
+    <br/>
+    <h3 class="text-center text-dark">Search a string and display the position of the match</h3>
+    <button class="buttons" id="errorC" type="button" onclick="findPosi()">Start</button>
+    <p id="posi" class="text-secondary text-center"></p>
+    <br/>
+    <br/>
+    <h3 class="text-center text-dark">The JavaScript objects could be mutables</h3>
+    <p class="text-center text-dark" id="mutable"></p>
+    <button class="buttons" id="errorC" type="button" onclick="mutable()">Launcher</button>
+    <p class="text-center text-dark">In the example above, the real value of age is 25, but we overwrite the value with 24</p>
+    <p class="text-center text-dark">Because, we make a mistake with the Maria's age and we fixed it with that</p>
 
+</div>
+
+<div class="container conta">
+    <h3 class="text-center text-dark">You can add new properties to existing objects.</h3>
+    <button class="buttons" id="errorC" type="button" onclick="addProper()">Launcher</button>
+    <p class="text-dark text-center" id="addProper"></p>
 </div>
 
 <div class="footer">
