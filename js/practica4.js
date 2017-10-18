@@ -165,6 +165,18 @@ function addProper() {
     }
 }
 
+function deleteProper() {
+    var person = {name:"Daniela", last:"Marquez", age:"29", colorSkin: "brown"}
+    delete person.colorSkin;
+    var input = document.getElementById("deleteProper");
+    if(input.style.display===""|| input.style.display==="none"){
+        input.style.display = "block";
+        input.innerHTML = person.name+ " "+person.last+ " "+person.colorSkin;
+    }else {
+        input.style.display = "none";
+    }
+}
+
 
 
 
