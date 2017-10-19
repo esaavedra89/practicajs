@@ -58,7 +58,7 @@
         h1, h2, h3, h4{
             margin-top: 10px;
         }
-        #errorC{margin-left: 43%;display: block;}
+        #errorC{margin-left: 44%;display: block;}
         .footer{
             margin-top: 20px;
             padding: 30px 0 20px 0;
@@ -138,16 +138,52 @@
 </div>
 
 <div class="container conta">
-
-
+    <h3 class="text-center text-dark">Access an array value of a JSON object.</h3>
+    <p class="text-center text-dark" id="arrayJS"></p>
+    <br/>
+    <h3 class="text-center text-dark">Looping through an array using a for in loop</h3>
+    <p class="text-center text-dark" id="loopingJS"></p>
+    <br/>
+    <h3 class="text-center text-dark">Loopin through an array using a for loop</h3>
+    <p class="text-center text-dark" id="forJS"></p>
 </div>
 
+
+
+<div class="container conta">
+    <h3 class="text-center text-dark">Looping through arrays inside arrays.</h3>
+    <h4 class="text-center text-dark"> Delvalle's Sons</h4>
+    <p id="arrayArray" class="text-center text-dark"></p>
+</div>
+
+
+<div class="container conta">
+    <h3 class="text-center text-dark">How to modify an array value of a JSON object.</h3>
+    <p id="modArray" class="text-center text-dark"></p>
+</div>
+
+<div class="container conta">
+    <h3 class="text-center text-dark">How to delete properties of an array.</h3>
+    <p id="delArray" class="text-center text-dark"></p>
+</div>
+<div class="container conta">
+    <h3 class="text-center text-dark">Create Object from JSON String</h3>
+    <br>
+    <p class="text-center text-dark">With this JavaScript code:</p>
+    <pre class="text-center">
+        var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+    </pre>
+    <p class="text-center text-dark">We receive this response: </p>
+    <p id="createJS" class="text-center text-dark"></p>
+</div>
 <div class="footer">
     <div class="container">
         <p><span class="text-l">All Rights Reserved</span>
             <span class="text-r">This Fucking Shit</span></p>
     </div>
 </div>
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script type="text/javascript" src="js/practica5.js"></script>
 </body>
