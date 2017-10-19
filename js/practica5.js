@@ -217,4 +217,3 @@ var milka = JSON.parse('{"name":"Milka","age":5,"city":"Maturín"}');
 document.getElementById("createJS").innerHTML = milka.name +"," +milka.age;
 }
 window.onload = milka();
-
